@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Midnight Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Midnight Performance Calculator</h1>
+
+    <div class="container">
+
+        <h2>Customer Information</h2>
+
+        <input type="text" id="customerName" placeholder="Customer Name">
+
+        <input type="text" id="vehicleName" placeholder="Vehicle Name">
+
+        <hr>
+
+        <h2>Performance Upgrades</h2>
+
+        <div id="performanceList"></div>
+
+        <hr>
+
+        <h2>Cosmetic Upgrades</h2>
+
+        <input
+            type="text"
+            id="cosmeticName"
+            placeholder="Cosmetic Upgrade Name">
+
+        <input
+            type="number"
+            id="cosmeticPrice"
+            placeholder="Price">
+
+        <button onclick="addCosmeticUpgrade()">
+            Add Cosmetic Upgrade
+        </button>
+
+        <div id="cosmeticList"></div>
+
+        <hr>
+
+        <h2>Discount</h2>
+
+        <select id="discount" onchange="calculateTotal()">
+            <option value="0">No Discount</option>
+            <option value="10">10% Off</option>
+            <option value="15">15% Off</option>
+            <option value="20">20% Off</option>
+            <option value="25">25% Off</option>
+        </select>
+
+        <hr>
+
+        <h2 id="subtotal">Subtotal: $0</h2>
+
+        <h2 id="discountAmount">Discount: $0</h2>
+
+        <h2 id="finalTotal">Final Total: $0</h2>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

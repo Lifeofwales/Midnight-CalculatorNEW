@@ -1,0 +1,36 @@
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+.container {
+    width: 900px;
+    margin: auto;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.upgrade {
+    background: #222;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+hr {
+    margin: 20px;
+}
