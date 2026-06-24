@@ -1,23 +1,63 @@
 const performanceUpgrades = [
     {
-        name: "Turbo Kit",
-        price: 5000
+        name: "Breaks 1",
+        price: 1800
+    },
+     {
+        name: "Breaks 2",
+        price: 2700
+    },
+     {
+        name: "Breaks 3",
+        price: 3600
     },
     {
-        name: "ECU Tune",
-        price: 2500
+        name: "Transmission 1",
+        price: 900
+    },
+     {
+        name: "Transmission 2",
+        price: 1125
+    },
+     {
+        name: "Transmission 3",
+        price: 1350
     },
     {
-        name: "Supercharger",
-        price: 7500
+        name: "Suspension 1",
+        price: 900
     },
     {
-        name: "Transmission Upgrade",
-        price: 4000
+        name: "Suspension 2",
+        price: 1800
     },
     {
-        name: "Coilovers",
-        price: 2000
+        name: "Suspension 3",
+        price: 3150
+    },
+    {
+        name: "Suspension 4",
+        price: 3600
+    },
+     {
+        name: "Armor 1",
+        price: 900
+    },
+    {
+        name: "Armor 2",
+        price: 2700
+    },
+    {
+        name: "Armor 3",
+        price: 3600
+    },
+    {
+        name: "Armor 4",
+        price: 4500
+    },
+    {
+        name: "Armor 5",
+        price: 6750
     }
 ];
 
