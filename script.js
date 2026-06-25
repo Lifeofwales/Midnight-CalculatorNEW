@@ -58,6 +58,26 @@ const performanceUpgrades = [
     {
         name: "Armor 5",
         price: 6750
+    },
+     {
+        name: "Turbo",
+        price: 5400
+    },
+    {
+        name: "EMS 2",
+        price: 2250
+    },
+    {
+        name: "EMS 3",
+        price: 3150
+    },
+    {
+        name: "EMS 4",
+        price: 4500
+    },
+    {
+        name: "EMS 5",
+        price: 7200
     }
 ];
 
