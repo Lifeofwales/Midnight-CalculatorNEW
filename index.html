@@ -1,73 +1,124 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>Midnight Performance Calculator</h1>
+    <div class="app">
 
-    <div class="container">
+        <header class="topbar">
+            <div class="topbar-left">
+                <div class="field-group">
+                    <label for="customerName">Customer Name</label>
+                    <input type="text" id="customerName" placeholder="Enter customer name">
+                </div>
 
-        <h2>Customer Information</h2>
+                <div class="field-group">
+                    <label for="vehicleName">Vehicle Name</label>
+                    <input type="text" id="vehicleName" placeholder="Enter vehicle name / model">
+                </div>
+            </div>
 
-        <input type="text" id="customerName" placeholder="Customer Name">
+            <div class="topbar-center">
+                <h1>Midnight Tuner</h1>
+                <p>Owner - Axel Steel</p>
+            </div>
+        </header>
 
-        <input type="text" id="vehicleName" placeholder="Vehicle Name">
+        <main class="container">
 
-        <hr>
+            <!-- LEFT COLUMN -->
+            <section class="panel performance-col" id="col1">
+                <div class="panel-title performance-title">Performance Upgrades</div>
+            </section>
 
-        <h2>Performance Upgrades</h2>
+            <!-- MIDDLE COLUMN -->
+            <section class="panel performance-col" id="col2">
+                <div class="panel-title performance-title">Performance Upgrades</div>
+            </section>
 
-        <div id="performanceList"></div>
+            <!-- RIGHT COLUMN -->
+            <section class="panel right-panel">
 
-        <hr>
+                <div class="panel-title cosmetic-title">Cosmetic Upgrades</div>
 
-        <h2>Cosmetic Upgrades</h2>
+                <div class="cosmetic-form">
+                    <input
+                        type="text"
+                        id="cosmeticName"
+                        placeholder="Enter cosmetic name">
 
-        <input
-            type="text"
-            id="cosmeticName"
-            placeholder="Cosmetic Upgrade Name">
+                    <input
+                        type="number"
+                        id="cosmeticPrice"
+                        placeholder="Price ($)">
 
-        <input
-            type="number"
-            id="cosmeticPrice"
-            placeholder="Price">
+                    <button onclick="addCosmeticUpgrade()">ADD</button>
+                </div>
 
-        <button onclick="addCosmeticUpgrade()">
-            Add Cosmetic Upgrade
-        </button>
+                <div id="cosmeticList" class="cosmetic-list"></div>
 
-        <div id="cosmeticList"></div>
+                <div class="discount-box">
+                    <div class="panel-title discount-title">Discount</div>
+                    <select id="discount" onchange="calculateTotal()">
+                        <option value="0">No Discount (0%)</option>
+                        <option value="10">10% Off</option>
+                        <option value="15">15% Off</option>
+                        <option value="20">20% Off</option>
+                        <option value="25">25% Off</option>
+                    </select>
+                </div>
 
-        <hr>
+                <div class="totals-box">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="subtotalAmount">$0.00</span>
+                    </div>
 
-        <h2>Discount</h2>
+                    <div class="total-row labor-row">
+                        <span>Labor Total</span>
+                        <span id="laborTotalAmount">$0.00</span>
+                    </div>
 
-        <select id="discount" onchange="calculateTotal()">
-            <option value="0">No Discount</option>
-            <option value="10">10% Off</option>
-            <option value="15">15% Off</option>
-            <option value="20">20% Off</option>
-            <option value="25">25% Off</option>
-        </select>
+                    <div class="labor-toggle">
+                        <label>
+                            <input
+                                type="checkbox"
+                                id="removeLabor"
+                                onchange="calculateTotal()"
+                            >
+                            Remove Labor From Final Total
+                        </label>
+                    </div>
 
-        <hr>
+                    <div class="total-row">
+                        <span>Discount</span>
+                        <span id="discountValue" class="discount-red">$0.00</span>
+                    </div>
 
-        <h2 id="subtotal">Subtotal: $0</h2>
+                    <div class="final-total">
+                        <span>FINAL TOTAL</span>
+                        <span id="finalTotalAmount" class="total-green">$0.00</span>
+                    </div>
+                </div>
 
-        <h2 id="discountAmount">Discount: $0</h2>
+                <div class="shop-banner-box">
+                    <img
+                        src="midnight-banner.png"
+                        alt="Midnight Tuners Banner"
+                        class="shop-banner"
+                    >
+                </div>
 
-        <h2 id="finalTotal">Final Total: $0</h2>
+            </section>
 
+        </main>
     </div>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
